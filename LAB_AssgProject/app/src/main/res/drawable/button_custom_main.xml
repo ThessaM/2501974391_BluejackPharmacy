@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <stroke
+        android:width="2dp"
+        android:color="@color/logoDarkBlue" />
+    <corners android:radius="25dp"/>
+<!--    <solid android:color="@color/logoDarkBlue"/>-->
+    <gradient android:startColor="@color/logoDarkBlue"
+        android:endColor="@color/logoDarkBlueVariant"
+        android:angle="45"/>
+    <padding android:bottom="5dp"
+        android:top="5dp"
+        android:left="15dp"
+        android:right="15dp"/>
+</shape>

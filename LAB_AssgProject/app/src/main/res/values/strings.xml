@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">BluejackPharmacy_2501974391</string>
+    <string name="logo">Logo</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="username">Username</string>
+    <string name="phone">Phone Number</string>
+    <string name="login">Login</string>
+    <string name="toLogin">Go To Login Page</string>
+    <string name="Register">Register</string>
+    <string name="toRegister">Go To Register Page</string>
+    <string name="new_account">Create Account</string>
+    <string name="logout">Logout</string>
+
+    <string name="menu">Menu</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_transaction">Transaction</string>
+    <string name="menu_about">About Us</string>
+
+    <string name="medicine_image">Medicine Image</string>
+    <string name="medicine_name">Medicine Name</string>
+    <string name="medicine_manufacturer">Medicine Manufacturer</string>
+    <string name="medicine_price">Medicine Price</string>
+    <string name="medicine_description">Medicine Description</string>
+    <string name="description_Title">Description:</string>
+
+    <string name="allMedicines">All Medicines</string>
+    <string name="price_symbol">Rp. %1$d</string>
+
+    <string name="transMed_date">Transaction Date</string>
+    <string name="transMed_quantity">Qty</string>
+    <string name="transItem_update">Update trans btn</string>
+    <string name="transItem_delete">Delete trans btn</string>
+
+    <string name="allTransactions">All Transactions</string>
+    <string name="quantityDisplay">Qty: %1$d</string>
+
+    <string name="buy_medicine">Buy Medicine:</string>
+    <string name="input_qty">0</string>
+    <string name="buy">Buy</string>
+
+    <string name="description">Bluejack Pharmacy is a pharmacy founded by the Bluejackets Community. As of today, it stands as one of the best pharmacies in Indonesia. Committed to provide quality healthcare products and services anywhere.</string>
+    <string name="map">map view</string>
+
+    <string name="UpdateQuantity">Update Quantity</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

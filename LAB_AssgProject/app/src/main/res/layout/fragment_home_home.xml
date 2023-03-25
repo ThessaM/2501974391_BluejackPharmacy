@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".home_home"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/logo"
+            />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop ="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:paddingBottom="10dp"
+            android:textSize="25sp"
+            android:textColor="@color/logoDarkBlue"
+            android:textStyle="bold"
+            android:text="@string/allMedicines" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_home_medReView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="15dp"
+            android:layout_marginBottom="10dp"
+            tools:listitem="@layout/medicine_item" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".home_home">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_margin="30dp"-->
+<!--        >-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="150dp"-->
+<!--            android:src="@drawable/logo"-->
+<!--            android:contentDescription="@string/logo"-->
+<!--            />-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/home_home_medReView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:paddingTop="40dp"-->
+<!--            android:paddingBottom="40dp"/>-->
+
+
+<!--    </LinearLayout>-->
+
+
+<!--</FrameLayout>-->

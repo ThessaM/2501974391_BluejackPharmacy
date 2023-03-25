@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/menu_logout"
+        android:title="@string/logout"
+        app:showAsAction="always"
+        android:icon="@drawable/baseline_logout_24"
+        />
+
+    <item
+        android:id="@+id/menu_about"
+        android:title="@string/menu_about"
+        app:showAsAction="always"
+        android:icon="@drawable/baseline_info_24"
+        />
+
+<!--    <item-->
+<!--        android:id="@+id/menu_section1"-->
+<!--        android:title="@string/menu_home"-->
+<!--        app:showAsAction="never"-->
+<!--        />-->
+
+<!--    <item-->
+<!--        android:id="@+id/menu_section2"-->
+<!--        android:title="@string/menu_transaction"-->
+<!--        app:showAsAction="never"-->
+<!--        />-->
+
+</menu>

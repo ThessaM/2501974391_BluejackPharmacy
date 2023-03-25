@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home_transaction"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    >
+
+    <TextView
+        android:id="@+id/home_transaction_allTrans_Txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop ="10dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="10dp"
+        android:textSize="25sp"
+        android:textColor="@color/logoDarkBlue"
+        android:textStyle="bold"
+        android:text="@string/allTransactions" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_transaction_ReView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        tools:listitem="@layout/transaction_med_item" />
+
+</LinearLayout>

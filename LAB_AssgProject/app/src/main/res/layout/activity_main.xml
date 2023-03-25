@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:padding="50dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/logo"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:id="@+id/login_edtx_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edtx_custom_field"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:drawablePadding="10dp"
+            android:autofillHints="emailAddress"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/login_edtx_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edtx_custom_field"
+            android:drawableStart="@drawable/baseline_key_24"
+            android:drawablePadding="10dp"
+            android:autofillHints="password"
+            android:ems="10"
+            android:textSize="20sp"
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp"
+            android:hint="@string/password"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login_button_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/button_custom_main"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login_button_toRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toRegister"
+            android:textColor="@color/logoDarkBlue"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_custom_secondary"
+            />
+
+
+    </LinearLayout>
+
+</ScrollView>
+

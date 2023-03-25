@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fragment
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/trial_map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    tools:layout="@layout/fragment_home_transaction" />
+
+<!--jujur ni ya siapapun yg ngecek file ini,
+aku ga ngerti kenapa harus pake layout fragment home gini de buat map
+padahal yg muncul kan beda yaa
+lelah hayati memikirkan ini
+errornya ga ngotak sampe merembet kemana mana
+btw ini cuma buat nyoba, ga ku delete karena sayang aja :)
+-->

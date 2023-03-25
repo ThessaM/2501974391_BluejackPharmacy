@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".register_page"
+        android:orientation="vertical"
+        android:padding="50dp"
+        >
+
+        <TextView
+            android:id="@+id/register_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/logoDarkBlue"
+            android:text="@string/new_account"
+            android:paddingTop="20dp"
+            />
+
+        <EditText
+            android:id="@+id/register_edtx_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/edtx_custom_field"
+            android:drawableStart="@drawable/baseline_person_24"
+            android:drawablePadding="10dp"
+            android:autofillHints="name"
+            android:hint="@string/username"
+            android:textColor="@color/black"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/register_edtx_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/edtx_custom_field"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:drawablePadding="10dp"
+            android:autofillHints="emailAddress"
+            android:ems="10"
+            android:hint="@string/email"
+            android:textColor="@color/black"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/register_edtx_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/edtx_custom_field"
+            android:drawableStart="@drawable/baseline_key_24"
+            android:drawablePadding="10dp"
+            android:autofillHints="password"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:hint="@string/password"
+            />
+
+        <EditText
+            android:id="@+id/register_edtx_confpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/edtx_custom_field"
+            android:drawableStart="@drawable/baseline_key_off_24"
+            android:drawablePadding="10dp"
+            android:autofillHints="password"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:hint="@string/confirm_password"
+            />
+
+        <EditText
+            android:id="@+id/register_edtx_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/edtx_custom_field"
+            android:drawableStart="@drawable/baseline_numbers_24"
+            android:drawablePadding="10dp"
+            android:autofillHints="phone"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:hint="@string/phone"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/register_button_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Register"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/button_custom_main"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/register_button_toLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toLogin"
+            android:textColor="@color/logoDarkBlue"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_custom_secondary"
+            />
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
+<!--<ScrollView-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    >-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        tools:context=".register_page"-->
+<!--        android:background="@drawable/background"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:paddingRight="50dp"-->
+<!--        android:paddingLeft="50dp"-->
+<!--        >-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/register_textview"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:paddingTop="50dp"-->
+<!--            android:text="@string/new_account"-->
+<!--            android:textColor="@color/logoDarkBlue"-->
+<!--            android:textSize="30sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/register_edtx_name"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:autofillHints="name"-->
+<!--            android:hint="@string/username"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="textPersonName"-->
+<!--            android:textSize="20sp"/>-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/register_edtx_email"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="23dp"-->
+<!--            android:autofillHints="emailAddress"-->
+<!--            android:ems="10"-->
+<!--            android:hint="@string/email"-->
+<!--            android:inputType="textEmailAddress"-->
+<!--            android:textSize="20sp" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/register_edtx_password"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:layout_marginTop="23dp"-->
+<!--            android:autofillHints="password"-->
+<!--            android:textSize="20sp"-->
+<!--            android:hint="@string/password"-->
+<!--            />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/register_edtx_confpassword"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:layout_marginTop="23dp"-->
+<!--            android:autofillHints="password"-->
+<!--            android:textSize="20sp"-->
+<!--            android:hint="@string/confirm_password"-->
+<!--            />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/register_edtx_phone"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="phone"-->
+<!--            android:layout_marginTop="23dp"-->
+<!--            android:autofillHints="phone"-->
+<!--            android:textSize="20sp"-->
+<!--            android:hint="@string/phone"-->
+<!--            />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/register_button_register"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/Register"-->
+<!--            android:textSize="15sp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="35dp"-->
+<!--            android:backgroundTint="@color/logoDarkBlue"-->
+<!--            />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/register_button_toLogin"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/toLogin"-->
+<!--            android:textSize="15sp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:backgroundTint="@color/logoDarkBlue"-->
+<!--            />-->
+
+<!--    </LinearLayout>-->
+<!--</ScrollView>-->
