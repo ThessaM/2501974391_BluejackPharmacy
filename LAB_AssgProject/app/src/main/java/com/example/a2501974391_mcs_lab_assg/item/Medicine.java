@@ -12,12 +12,6 @@ public class Medicine {
     private Integer medicinePrice;
     private String medicineDescription;
 
-//    public Medicine(ImageView medicineImage, String medicineName, String medicineManufacture, int medicinePrice) {
-//        this.medicineImage = medicineImage;
-//        this.medicineName = medicineName;
-//        this.medicineManufacture = medicineManufacture;
-//        this.medicinePrice = medicinePrice;
-//    }
 public Medicine(int medicineId, int medicineImage, String medicineName, String medicineManufacture, int medicinePrice, String medicineDescription) {
     this.medicineId = medicineId;
     this.medicineImage = medicineImage;

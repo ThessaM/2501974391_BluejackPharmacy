@@ -3,16 +3,11 @@ package com.example.a2501974391_mcs_lab_assg.item;
 import java.util.Date;
 
 public class MedicineTransaction {
-
-//    private Date transactionDate;
     private Integer transactionId;
     private Integer medicineId;
     private Integer userId;
     private String transactionDate;
-//    private String transactionMedName;
-//    private Integer transactionMedPrice;
     private Integer transactionQty;
-
 
 
     public MedicineTransaction(Integer transactionId, Integer medicineId, Integer userId, String transactionDate, Integer transactionQty) {

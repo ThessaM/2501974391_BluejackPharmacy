@@ -12,14 +12,9 @@ import android.view.MenuItem;
 
 
 import com.example.a2501974391_mcs_lab_assg.adapter.HomePageFragmentAdapter;
-import com.example.a2501974391_mcs_lab_assg.adapter.MedTransactionAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 
-
-//interface ToRefreshHomePage{
-//    void refreshHome();
-//}
 
 public class home_page extends AppCompatActivity {
 
@@ -113,7 +108,6 @@ public class home_page extends AppCompatActivity {
                 //go to about page
                 Intent toAboutPg = new Intent(this, aboutus_page.class);
                 startActivity(toAboutPg);
-//                this.finish();
                 return true;
 //                Intent toTrialPg = new Intent(this, google_map_trial.class);
 //                startActivity(toTrialPg);
@@ -122,13 +116,4 @@ public class home_page extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-//    public  void refreshHomeActivity(){
-//        recreate();
-//    }
-
-
-//    @Override
-//    public void refreshHome() {
-//        recreate();
-//    }
 }

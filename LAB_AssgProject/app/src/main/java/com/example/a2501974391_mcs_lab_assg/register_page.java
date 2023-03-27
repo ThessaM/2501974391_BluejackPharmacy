@@ -2,7 +2,6 @@ package com.example.a2501974391_mcs_lab_assg;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +11,6 @@ import android.widget.Toast;
 import com.example.a2501974391_mcs_lab_assg.item.DataSingleton;
 import com.example.a2501974391_mcs_lab_assg.item.User;
 
-import kotlin.text.Regex;
 
 public class register_page extends AppCompatActivity implements View.OnClickListener {
 
@@ -44,15 +42,16 @@ public class register_page extends AppCompatActivity implements View.OnClickList
                  Toast.makeText(this, "All fields must be filled", Toast.LENGTH_SHORT).show();
              }else if(nameEdtx.getText().toString().length() < 5){
                  Toast.makeText(this, "Name must be at least 5 characters", Toast.LENGTH_SHORT).show();
-             }else if(emailEdtx.getText().toString().endsWith(".com") == false){
+             }else if(!emailEdtx.getText().toString().endsWith(".com")){
                  Toast.makeText(this, "Email must ends with '.com'", Toast.LENGTH_SHORT).show();
-             }else if(passwordEdtx.getText().toString().matches("^(?=.*[a-zA-Z])(?=.*[0-9])[A-Za-z0-9]+$") == false){
+             }else if(!passwordEdtx.getText().toString().matches("^(?=.*[a-zA-Z])(?=.*[0-9])[A-Za-z0-9]+$")){
                  Toast.makeText(this, "Password must be alphanumeric", Toast.LENGTH_SHORT).show();
-             }else if(passwordEdtx.getText().toString().contentEquals(confPasswordEdtx.getText().toString()) == false){
+             }else if(!passwordEdtx.getText().toString().contentEquals(confPasswordEdtx.getText().toString())){
                  Toast.makeText(this, "Password and confirm password must be the same", Toast.LENGTH_SHORT).show();
              }else{
                  //generate user id (integer that always increments)
                  int userNewId = DataSingleton.getInstance().getUserList().lastElement().getUserId() + 1;
+
                  //add data to database
                  User registerUser = new User(userNewId, nameEdtx.getText().toString(), emailEdtx.getText().toString(), passwordEdtx.getText().toString(), phoneEdtx.getText().toString(), "true");
                  DataSingleton.getInstance().addUserList(registerUser);
@@ -63,7 +62,7 @@ public class register_page extends AppCompatActivity implements View.OnClickList
 //                 Intent toLoginPg = new Intent(this, MainActivity.class);
 //                 startActivity(toLoginPg);
                  finish();
-                 //Toast.makeText(this, "success", Toast.LENGTH_SHORT).show();
+
              }
 
         }else if(v == toLoginBtn){

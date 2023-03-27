@@ -28,9 +28,6 @@ public class home_transaction extends Fragment {
     MedTransactionAdapter medTransactionAdapter;
     Integer curUserId;
 
-//    ImageButton updateBtn, deleteBtn, cancelBtn, confirmBtn;
-//    EditText quantityNew;
-
 
     public home_transaction() {
         // Required empty public constructor
@@ -58,15 +55,6 @@ public class home_transaction extends Fragment {
 
         //recycle view
         medicineTransactionList = new Vector<>();
-
-//        medicineTransactionList.add(new MedicineTransaction(0,1, "21-03-2023", "Medicine 1", 15000, 4));
-
-//        DataSingleton.getInstance().getMedTransactionList().forEach(transData->{
-//            if(transData.getUserId().equals(curUserId)){
-//                medicineTransactionList.add(transData);
-//            }
-//        });
-
         medicineTransactionList = DataSingleton.getInstance().getUserMedTransaction();
 
         medTransactionAdapter = new MedTransactionAdapter(view.getContext());
@@ -142,7 +130,11 @@ public class home_transaction extends Fragment {
 //
 //    @Override
 //    public void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
+//                            Bundle savedInstanceState) {
+////        // Inflate the layout for this fragment
+////        return inflater.inflate(R.layout.fragment_home_transaction, container, false);
+////    }
+////}    super.onCreate(savedInstanceState);
 //        if (getArguments() != null) {
 //            mParam1 = getArguments().getString(ARG_PARAM1);
 //            mParam2 = getArguments().getString(ARG_PARAM2);
@@ -151,8 +143,4 @@ public class home_transaction extends Fragment {
 //
 //    @Override
 //    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-//        // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_home_transaction, container, false);
-//    }
-//}
+//

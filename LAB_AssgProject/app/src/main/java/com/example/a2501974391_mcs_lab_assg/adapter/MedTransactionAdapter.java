@@ -91,12 +91,12 @@ public class MedTransactionAdapter extends RecyclerView.Adapter<MedTransactionAd
             if(v == updateBtn){
                 showEditQtyDialog(v.getContext());
             }else if(v == deleteBtn){
-                MedicineTransaction curTransId = medicineTransactions.get(getAdapterPosition());
+                MedicineTransaction curTrans = medicineTransactions.get(getAdapterPosition());
 //                Vector<MedicineTransaction> deletedTransList = DataSingleton.getInstance().getMedTransactionList();
 //                deletedTransList.remove(curTransId);
 //                DataSingleton.getInstance().setMedTransactionList(deletedTransList);
-                DataSingleton.getInstance().deleteMedTransactionList(curTransId);
-                DataSingleton.getInstance().deleteUserMedTransaction(curTransId);
+                DataSingleton.getInstance().deleteMedTransactionList(curTrans);
+                DataSingleton.getInstance().deleteUserMedTransaction(curTrans);
                 notifyItemRemoved(getAdapterPosition());
 //                notifyDataSetChanged();
                 Toast.makeText(v.getContext(), "delete success", Toast.LENGTH_SHORT).show();
@@ -112,36 +112,37 @@ public class MedTransactionAdapter extends RecyclerView.Adapter<MedTransactionAd
             qtyDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             qtyDialog.show();
 
-            //dialog buttons
+            //dialog button
             cancelBtn = qtyDialog.findViewById(R.id.dialog_Btn_cancel);
             confirmBtn = qtyDialog.findViewById(R.id.dialog_Btn_confirm);
+
+            //quantity edtx
             quantityNew = qtyDialog.findViewById(R.id.dialog_edtx_newQty);
 
-            cancelBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    qtyDialog.dismiss();
-                }
-            });
-//
-            confirmBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+            cancelBtn.setOnClickListener(v -> qtyDialog.dismiss());
 
-                    if(quantityNew.getText().toString().isEmpty()){
-                        Toast.makeText(v.getContext(), "Quantity must be filled", Toast.LENGTH_SHORT).show();
-                    } else if(Integer.parseInt(quantityNew.getText().toString()) == 0){
-                        Toast.makeText(v.getContext(), "Quantity must be more than 0", Toast.LENGTH_SHORT).show();
-                    }else{
-                        MedicineTransaction curTransId = medicineTransactions.get(getAdapterPosition());
-                        int mainTransactionIdx = DataSingleton.getInstance().getMedTransactionList().indexOf(curTransId);
-                        curTransId.setTransactionQty(Integer.parseInt(quantityNew.getText().toString()));
-                        DataSingleton.getInstance().updateTransactionList(curTransId, mainTransactionIdx);
-                        DataSingleton.getInstance().updateUserMedTransaction(curTransId, getAdapterPosition());
-                        notifyItemChanged(getAdapterPosition());
-                        qtyDialog.dismiss();
-                        Toast.makeText(v.getContext(), "update success", Toast.LENGTH_SHORT).show();
-                    }
+//            cancelBtn.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    qtyDialog.dismiss();
+//                }
+//            });
+//
+            confirmBtn.setOnClickListener(v -> {
+
+                if(quantityNew.getText().toString().isEmpty()){
+                    Toast.makeText(v.getContext(), "Quantity must be filled", Toast.LENGTH_SHORT).show();
+                } else if(Integer.parseInt(quantityNew.getText().toString()) == 0){
+                    Toast.makeText(v.getContext(), "Quantity must be more than 0", Toast.LENGTH_SHORT).show();
+                }else{
+                    MedicineTransaction curTransId = medicineTransactions.get(getAdapterPosition());
+                    int mainTransactionIdx = DataSingleton.getInstance().getMedTransactionList().indexOf(curTransId);
+                    curTransId.setTransactionQty(Integer.parseInt(quantityNew.getText().toString()));
+                    DataSingleton.getInstance().updateTransactionList(curTransId, mainTransactionIdx);
+                    DataSingleton.getInstance().updateUserMedTransaction(curTransId, getAdapterPosition());
+                    notifyItemChanged(getAdapterPosition());
+                    qtyDialog.dismiss();
+                    Toast.makeText(v.getContext(), "update success", Toast.LENGTH_SHORT).show();
                 }
             });
         }

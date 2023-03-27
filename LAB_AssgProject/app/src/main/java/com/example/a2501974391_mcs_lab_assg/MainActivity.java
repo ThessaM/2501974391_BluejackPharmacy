@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -91,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     toHomePg.putExtra("curUserId", userData.getUserId());
 
                                     //set usertransactionlist
-                                    Vector<MedicineTransaction> userTransaction = new Vector<MedicineTransaction>();
+                                    Vector<MedicineTransaction> userTransaction = new Vector<>();
                                     DataSingleton.getInstance().getMedTransactionList().forEach(transData->{
                                         if(transData.getUserId().equals(userData.getUserId())){
                                             userTransaction.add(transData);
@@ -99,10 +98,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     });
                                     DataSingleton.getInstance().setUserMedTransaction(userTransaction);
 
+
                                     Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
                                     startActivity(toHomePg);
-//                                    this.finish();
-//                                    this.recreate();
 
                                 }else{
                                     Toast.makeText(this, "User is Not Verified", Toast.LENGTH_SHORT).show();
@@ -111,7 +109,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 //password salah
                                 Toast.makeText(this, "Wrong Password", Toast.LENGTH_SHORT).show();
                             }
-                            return;
                         }
                     }
                 );

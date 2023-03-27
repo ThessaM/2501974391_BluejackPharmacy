@@ -3,7 +3,6 @@ package com.example.a2501974391_mcs_lab_assg;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -18,7 +17,6 @@ import com.example.a2501974391_mcs_lab_assg.item.DataSingleton;
 import com.example.a2501974391_mcs_lab_assg.item.Medicine;
 import com.example.a2501974391_mcs_lab_assg.item.MedicineTransaction;
 
-import java.text.DateFormat;
 import java.util.Date;
 
 public class detail_page extends AppCompatActivity implements View.OnClickListener {
@@ -71,19 +69,23 @@ public class detail_page extends AppCompatActivity implements View.OnClickListen
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        switch (item.getItemId()){
-            case R.id.menu_logout:
-                Intent toLoginPg = new Intent(this, MainActivity.class);
-                startActivity(toLoginPg);
-                return true;
-            case R.id.menu_about:
-                Intent toAboutPg = new Intent(this, aboutus_page.class);
-                startActivity(toAboutPg);
-                return true;
-            case android.R.id.home:
-                this.finish();
-                return true;
+        if(item.getItemId() == android.R.id.home){
+            finish();
         }
+
+//        switch (item.getItemId()){
+//            case R.id.menu_logout:
+//                Intent toLoginPg = new Intent(this, MainActivity.class);
+//                startActivity(toLoginPg);
+//                return true;
+//            case R.id.menu_about:
+//                Intent toAboutPg = new Intent(this, aboutus_page.class);
+//                startActivity(toAboutPg);
+//                return true;
+//            case android.R.id.home:
+//                this.finish();
+//                return true;
+//        }
 
         return super.onOptionsItemSelected(item);
     }

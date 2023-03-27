@@ -7,7 +7,7 @@ import java.util.Vector;
 
 public class DataSingleton {
 
-    //vector : sycnhronised, arraylist: nope
+    //vector : sycnhronised, arraylist: nope, pakai yg mana? 2 2nya bisa
 
     private Vector<User> userList = new Vector<>();
     private Vector<Medicine> medicineList = new Vector<>(Arrays.asList(
@@ -31,19 +31,23 @@ public class DataSingleton {
     private DataSingleton(){}
 
 
-    //buat edit isi vector (?)
+    //Functions
+
+    //users
     public Vector<User> getUserList() {
         return userList;
     }
 
-//    public void setUserList(Vector<User> userList) {
-//        this.userList = userList;
-//    }
+    public void setUserList(Vector<User> userList) {
+        this.userList = userList;
+    }
 
     public void addUserList(User userAdd) {
         this.userList.add(userAdd);
     }
 
+
+    //Medicines
     public Vector<Medicine> getMedicineList() {
         return medicineList;
     }
@@ -71,6 +75,7 @@ public class DataSingleton {
     public void updateTransactionList(MedicineTransaction medTransactionUpd, int index) {
         this.medTransactionList.setElementAt(medTransactionUpd, index);
     }
+
 
     //userMedTransaction
     public Vector<MedicineTransaction> getUserMedTransaction() {

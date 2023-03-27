@@ -3,15 +3,11 @@ package com.example.a2501974391_mcs_lab_assg;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.MenuItem;
 
-import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -22,8 +18,6 @@ public class aboutus_page extends AppCompatActivity implements OnMapReadyCallbac
 //    private MapView mapView;
 //    private static final String MapBundleKey = "MapViewBundleKey";
 //    private static final String MapBundleKey = "MapBundle";
-
-//    GoogleMap gMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,19 +46,24 @@ public class aboutus_page extends AppCompatActivity implements OnMapReadyCallbac
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.menu_logout:
-                Intent toLoginPg = new Intent(this, MainActivity.class);
-                startActivity(toLoginPg);
-                return true;
-            case R.id.menu_about:
-                Intent toAboutPg = new Intent(this, aboutus_page.class);
-                startActivity(toAboutPg);
-                return true;
-            case android.R.id.home:
-                this.finish();
-                return true;
+
+        if(item.getItemId() == android.R.id.home){
+            finish();
         }
+
+//        switch (item.getItemId()){
+//            case R.id.menu_logout:
+//                Intent toLoginPg = new Intent(this, MainActivity.class);
+//                startActivity(toLoginPg);
+//                return true;
+//            case R.id.menu_about:
+//                Intent toAboutPg = new Intent(this, aboutus_page.class);
+//                startActivity(toAboutPg);
+//                return true;
+//            case android.R.id.home:
+//                this.finish();
+//                return true;
+//        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -73,7 +72,9 @@ public class aboutus_page extends AppCompatActivity implements OnMapReadyCallbac
         googleMap.addMarker(new MarkerOptions().position(new LatLng(-6.202339050051723, 106.78280380867268)).title("Bluejack Pharmacy"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-6.202339050051723, 106.78280380867268), 15));
     }
-//
+
+
+    //buat MapView
 //    @Override
 //    protected void onStart() {
 //        super.onStart();
