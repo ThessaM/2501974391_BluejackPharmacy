@@ -27,6 +27,17 @@
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
+        android:visibility="gone"
         tools:listitem="@layout/transaction_med_item" />
+
+    <TextView
+        android:id="@+id/home_transaction_NoTransText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/noTransaction" />
+
 
 </LinearLayout>

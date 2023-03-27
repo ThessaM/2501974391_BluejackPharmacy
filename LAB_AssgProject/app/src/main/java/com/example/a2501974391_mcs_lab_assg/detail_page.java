@@ -113,10 +113,13 @@ public class detail_page extends AppCompatActivity implements View.OnClickListen
 
 
             //back to home page
-            Intent toHomePg = new Intent(this, home_page.class);
-            toHomePg.putExtra("curUserId", curUserId);
-            startActivity(toHomePg);
+//            Intent toHomePg = new Intent(this, home_page.class);
+//            toHomePg.putExtra("curUserId", curUserId);
+//            startActivity(toHomePg);
+
+//            notifyAll();
 //            this.finish();
+            finish();
         }
     }
 }

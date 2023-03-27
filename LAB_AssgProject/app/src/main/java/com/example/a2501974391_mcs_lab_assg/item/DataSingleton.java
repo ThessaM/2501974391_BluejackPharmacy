@@ -1,5 +1,8 @@
 package com.example.a2501974391_mcs_lab_assg.item;
 
+import com.example.a2501974391_mcs_lab_assg.R;
+
+import java.util.Arrays;
 import java.util.Vector;
 
 public class DataSingleton {
@@ -7,7 +10,11 @@ public class DataSingleton {
     //vector : sycnhronised, arraylist: nope
 
     private Vector<User> userList = new Vector<>();
-    private Vector<Medicine> medicineList = new Vector<>();
+    private Vector<Medicine> medicineList = new Vector<>(Arrays.asList(
+            new Medicine(0, R.drawable.medicine_template_a, "BlueJack Med Capsule", "PT. BluejackCompany", 15000, "Medicine for stomach ache"),
+            new Medicine(1, R.drawable.medicine_template_b, "BlueJack Flu Pill", "PT. BluejackCompany x PT. PillPharma", 25000, "Flu Pill created by Bluejack Company and PullPharma"),
+            new Medicine(2, R.drawable.medicine_template_c, "BlueJack Honey Remedy", "PT. BluejackCompany", 50000, "Cough Medicine, eat 2 times a day for maximum effect")
+    ));
     private Vector<MedicineTransaction> medTransactionList = new Vector<>();
     private Vector<MedicineTransaction> userMedTransaction = new Vector<>();
 

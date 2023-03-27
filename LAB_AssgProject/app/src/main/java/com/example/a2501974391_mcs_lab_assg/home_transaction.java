@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.a2501974391_mcs_lab_assg.adapter.MedTransactionAdapter;
 import com.example.a2501974391_mcs_lab_assg.item.DataSingleton;
@@ -23,6 +23,7 @@ import java.util.Vector;
 public class home_transaction extends Fragment {
 
     RecyclerView medicineTransactionReView;
+    TextView noTransactionText;
     Vector<MedicineTransaction> medicineTransactionList;
     MedTransactionAdapter medTransactionAdapter;
     Integer curUserId;
@@ -47,6 +48,7 @@ public class home_transaction extends Fragment {
         //get argument/data
         Bundle bundle = this.getArguments();
         curUserId = bundle.getInt("curUserId");
+
         return inflater.inflate(R.layout.fragment_home_transaction, container, false);
     }
 
@@ -74,9 +76,35 @@ public class home_transaction extends Fragment {
         medicineTransactionReView.setAdapter(medTransactionAdapter);
         medicineTransactionReView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
+        noTransactionText = view.findViewById(R.id.home_transaction_NoTransText);
+
+        if(DataSingleton.getInstance().getUserMedTransaction().isEmpty()){
+            noTransactionText.setVisibility(View.VISIBLE);
+            medicineTransactionReView.setVisibility(View.GONE);
+        }else{
+            noTransactionText.setVisibility(View.GONE);
+            medicineTransactionReView.setVisibility(View.VISIBLE);
+        }
+
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        medicineTransactionList = new Vector<>();
+        medicineTransactionList = DataSingleton.getInstance().getUserMedTransaction();
+        medTransactionAdapter.setMedicineTransactions(medicineTransactionList);
+        medicineTransactionReView.setAdapter(medTransactionAdapter);
+        medicineTransactionReView.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        if(DataSingleton.getInstance().getUserMedTransaction().isEmpty()){
+            noTransactionText.setVisibility(View.VISIBLE);
+            medicineTransactionReView.setVisibility(View.GONE);
+        }else{
+            noTransactionText.setVisibility(View.GONE);
+            medicineTransactionReView.setVisibility(View.VISIBLE);
+        }
+    }
 }
 
 //public class home_transaction extends Fragment {

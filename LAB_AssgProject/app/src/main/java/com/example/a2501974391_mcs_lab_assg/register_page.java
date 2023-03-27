@@ -60,14 +60,16 @@ public class register_page extends AppCompatActivity implements View.OnClickList
                  Toast.makeText(this, "Register Success", Toast.LENGTH_SHORT).show();
 
                  //back to login page
-                 Intent toLoginPg = new Intent(this, MainActivity.class);
-                 startActivity(toLoginPg);
+//                 Intent toLoginPg = new Intent(this, MainActivity.class);
+//                 startActivity(toLoginPg);
+                 finish();
                  //Toast.makeText(this, "success", Toast.LENGTH_SHORT).show();
              }
 
         }else if(v == toLoginBtn){
-            Intent toLoginPg = new Intent(this, MainActivity.class);
-            startActivity(toLoginPg);
+//            Intent toLoginPg = new Intent(this, MainActivity.class);
+//            startActivity(toLoginPg);
+            finish();
         }
     }
 }

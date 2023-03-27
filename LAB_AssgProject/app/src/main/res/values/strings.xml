@@ -36,6 +36,8 @@
 
     <string name="allTransactions">All Transactions</string>
     <string name="quantityDisplay">Qty: %1$d</string>
+    <string name="noTransaction">No Transaction Available</string>
+    <string name="totalPriceFormat">Total: Rp. %1$d</string>
 
     <string name="buy_medicine">Buy Medicine:</string>
     <string name="input_qty">0</string>
@@ -43,6 +45,9 @@
 
     <string name="description">Bluejack Pharmacy is a pharmacy founded by the Bluejackets Community. As of today, it stands as one of the best pharmacies in Indonesia. Committed to provide quality healthcare products and services anywhere.</string>
     <string name="map">map view</string>
+    <string name="bluejackAddress">Jl. mulu nembak kapan No.13 RT1/RW2, Kenangan, kec. Kenangan, Kota Masa Lalu, Jakarta, Indonesia 11543</string>
+    <string name="findUs">Find Us At</string>
+    <string name="about_identity">Bluejack Pharmacy App by Thessalonica</string>
 
     <string name="UpdateQuantity">Update Quantity</string>
     <string name="cancel">Cancel</string>

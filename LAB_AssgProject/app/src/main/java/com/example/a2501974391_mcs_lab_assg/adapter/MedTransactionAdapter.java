@@ -2,7 +2,6 @@ package com.example.a2501974391_mcs_lab_assg.adapter;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
@@ -19,7 +18,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.a2501974391_mcs_lab_assg.R;
-import com.example.a2501974391_mcs_lab_assg.home_page;
 import com.example.a2501974391_mcs_lab_assg.item.DataSingleton;
 import com.example.a2501974391_mcs_lab_assg.item.Medicine;
 import com.example.a2501974391_mcs_lab_assg.item.MedicineTransaction;
@@ -56,6 +54,7 @@ public class MedTransactionAdapter extends RecyclerView.Adapter<MedTransactionAd
         holder.transaction_medName.setText(medicines.get(medicineTransactions.get(holder.getAdapterPosition()).getMedicineId()).getMedicineName());
         holder.transaction_medPrice.setText(String.format(ctx.getResources().getString(R.string.price_symbol), medicines.get(medicineTransactions.get(holder.getAdapterPosition()).getMedicineId()).getMedicinePrice()));
         holder.transaction_qty.setText(String.format(ctx.getResources().getString(R.string.quantityDisplay), medicineTransactions.get(holder.getAdapterPosition()).getTransactionQty()));
+        holder.transaction_totalPrice.setText(String.format(ctx.getResources().getString(R.string.totalPriceFormat), medicines.get(medicineTransactions.get(holder.getAdapterPosition()).getMedicineId()).getMedicinePrice() * medicineTransactions.get(holder.getAdapterPosition()).getTransactionQty()));
     }
 
     @Override
@@ -66,6 +65,7 @@ public class MedTransactionAdapter extends RecyclerView.Adapter<MedTransactionAd
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView transaction_date, transaction_medName, transaction_medPrice, transaction_qty;
+        TextView transaction_totalPrice;
 
         ImageButton updateBtn, deleteBtn;
         Button cancelBtn, confirmBtn;
@@ -77,6 +77,7 @@ public class MedTransactionAdapter extends RecyclerView.Adapter<MedTransactionAd
             transaction_medName = itemView.findViewById(R.id.transItem_medName);
             transaction_medPrice = itemView.findViewById(R.id.transItem_medPrice);
             transaction_qty = itemView.findViewById(R.id.transItem_qty);
+            transaction_totalPrice = itemView.findViewById(R.id.transItem_totalPrice);
 
             //card buttons -- onclick
             updateBtn = itemView.findViewById(R.id.transMed_updateBtn);

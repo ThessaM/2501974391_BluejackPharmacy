@@ -104,13 +104,16 @@ public class home_page extends AppCompatActivity {
 
         switch (item.getItemId()){
             case R.id.menu_logout:
-                Intent toLoginPg = new Intent(this, MainActivity.class);
-                startActivity(toLoginPg);
+//                Intent toLoginPg = new Intent(this, MainActivity.class);
+//                startActivity(toLoginPg);
+//                this.finish();
+                finish();
                 return true;
             case R.id.menu_about:
                 //go to about page
                 Intent toAboutPg = new Intent(this, aboutus_page.class);
                 startActivity(toAboutPg);
+//                this.finish();
                 return true;
 //                Intent toTrialPg = new Intent(this, google_map_trial.class);
 //                startActivity(toTrialPg);
@@ -119,9 +122,9 @@ public class home_page extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public  void refreshHomeActivity(){
-        recreate();
-    }
+//    public  void refreshHomeActivity(){
+//        recreate();
+//    }
 
 
 //    @Override

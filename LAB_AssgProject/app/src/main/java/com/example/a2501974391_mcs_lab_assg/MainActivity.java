@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(DataSingleton.getInstance().getMedicineList().isEmpty()){
             Vector<Medicine> medicineList;
             medicineList = new Vector<>();
-            medicineList.add(new Medicine(0, R.drawable.medicine_template_a, "Medicine 1", "Manufacturer 1", 15000, "Medicine 1 from Manufacturer 1"));
-            medicineList.add(new Medicine(1, R.drawable.medicine_template_b, "Medicine 2", "Manufacturer 2", 25000, "Medicine 2 from Manufacturer 2"));
-            medicineList.add(new Medicine(2, R.drawable.medicine_template_c, "Medicine 3", "Manufacturer 1", 50000, "Medicine 3 from Manufacturer 1"));
+            medicineList.add(new Medicine(0, R.drawable.medicine_template_a, "BlueJack Med Capsule", "PT. BluejackCompany", 15000, "Medicine for stomach ache"));
+            medicineList.add(new Medicine(1, R.drawable.medicine_template_b, "BlueJack Flu Pill", "PT. BluejackCompany x PT. PillPharma", 25000, "Flu Pill created by Bluejack Company and PullPharma"));
+            medicineList.add(new Medicine(2, R.drawable.medicine_template_c, "BlueJack Honey Remedy", "PT. BluejackCompany", 50000, "Cough Medicine, eat 2 times a day for maximum effect"));
             DataSingleton.getInstance().setMedicineList(medicineList);
 //            Toast.makeText(this, "medListDone", Toast.LENGTH_SHORT).show();
         }
@@ -101,6 +101,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                                     Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
                                     startActivity(toHomePg);
+//                                    this.finish();
+//                                    this.recreate();
+
                                 }else{
                                     Toast.makeText(this, "User is Not Verified", Toast.LENGTH_SHORT).show();
                                 }
