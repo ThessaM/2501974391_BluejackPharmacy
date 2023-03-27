@@ -17,7 +17,9 @@ import com.example.a2501974391_mcs_lab_assg.item.DataSingleton;
 import com.example.a2501974391_mcs_lab_assg.item.Medicine;
 import com.example.a2501974391_mcs_lab_assg.item.MedicineTransaction;
 
+import java.text.NumberFormat;
 import java.util.Date;
+import java.util.Locale;
 
 public class detail_page extends AppCompatActivity implements View.OnClickListener {
 
@@ -61,7 +63,8 @@ public class detail_page extends AppCompatActivity implements View.OnClickListen
 
         medicineName.setText(curMedDetail.getMedicineName());
         medicineManufacturer.setText(curMedDetail.getMedicineManufacture());
-        medicinePrice.setText(String.format(this.getResources().getString(R.string.price_symbol), curMedDetail.getMedicinePrice()));
+//        medicinePrice.setText(String.format(this.getResources().getString(R.string.price_symbol), curMedDetail.getMedicinePrice()));
+        medicinePrice.setText(NumberFormat.getCurrencyInstance(new Locale("in", "ID")).format((double) curMedDetail.getMedicinePrice()));
         medicineDescription.setText(curMedDetail.getMedicineDescription());
         medicineImage.setImageResource(curMedDetail.getMedicineImage());
     }

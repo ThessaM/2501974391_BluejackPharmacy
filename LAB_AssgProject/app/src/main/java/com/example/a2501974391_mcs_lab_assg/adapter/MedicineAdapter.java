@@ -16,6 +16,8 @@ import com.example.a2501974391_mcs_lab_assg.detail_page;
 import com.example.a2501974391_mcs_lab_assg.item.Medicine;
 import com.example.a2501974391_mcs_lab_assg.R;
 
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.Vector;
 
 public class MedicineAdapter extends RecyclerView.Adapter<MedicineAdapter.ViewHolder> {
@@ -47,7 +49,8 @@ public class MedicineAdapter extends RecyclerView.Adapter<MedicineAdapter.ViewHo
         holder.medicineName.setText(medicines.get(position).getMedicineName());
         holder.medicineManufacturer.setText(medicines.get(position).getMedicineManufacture());
 //        holder.medicinePrice.setText("Rp. " + medicines.get(position).getMedicinePrice());
-        holder.medicinePrice.setText(String.format(ctx.getResources().getString(R.string.price_symbol), medicines.get(position).getMedicinePrice()));
+//        holder.medicinePrice.setText(String.format(ctx.getResources().getString(R.string.price_symbol), medicines.get(position).getMedicinePrice()));
+        holder.medicinePrice.setText(NumberFormat.getCurrencyInstance(new Locale("in", "ID")).format((double) medicines.get(position).getMedicinePrice()));
     }
 
 

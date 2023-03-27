@@ -38,6 +38,7 @@
     <string name="quantityDisplay">Qty: %1$d</string>
     <string name="noTransaction">No Transaction Available</string>
     <string name="totalPriceFormat">Total: Rp. %1$d</string>
+    <string name="totalPriceFormatString">Total: %1$s</string>
 
     <string name="buy_medicine">Buy Medicine:</string>
     <string name="input_qty">0</string>

@@ -22,6 +22,8 @@ import com.example.a2501974391_mcs_lab_assg.item.DataSingleton;
 import com.example.a2501974391_mcs_lab_assg.item.Medicine;
 import com.example.a2501974391_mcs_lab_assg.item.MedicineTransaction;
 
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.Vector;
 
 public class MedTransactionAdapter extends RecyclerView.Adapter<MedTransactionAdapter.ViewHolder> {
@@ -52,9 +54,11 @@ public class MedTransactionAdapter extends RecyclerView.Adapter<MedTransactionAd
         //kalo isi bisa berubah direkomen pake getAdapterPosition(?)
         holder.transaction_date.setText(medicineTransactions.get(holder.getAdapterPosition()).getTransactionDate());
         holder.transaction_medName.setText(medicines.get(medicineTransactions.get(holder.getAdapterPosition()).getMedicineId()).getMedicineName());
-        holder.transaction_medPrice.setText(String.format(ctx.getResources().getString(R.string.price_symbol), medicines.get(medicineTransactions.get(holder.getAdapterPosition()).getMedicineId()).getMedicinePrice()));
+//        holder.transaction_medPrice.setText(String.format(ctx.getResources().getString(R.string.price_symbol), medicines.get(medicineTransactions.get(holder.getAdapterPosition()).getMedicineId()).getMedicinePrice()));
+        holder.transaction_medPrice.setText(NumberFormat.getCurrencyInstance(new Locale("in", "ID")).format((double) medicines.get(medicineTransactions.get(holder.getAdapterPosition()).getMedicineId()).getMedicinePrice()));
         holder.transaction_qty.setText(String.format(ctx.getResources().getString(R.string.quantityDisplay), medicineTransactions.get(holder.getAdapterPosition()).getTransactionQty()));
-        holder.transaction_totalPrice.setText(String.format(ctx.getResources().getString(R.string.totalPriceFormat), medicines.get(medicineTransactions.get(holder.getAdapterPosition()).getMedicineId()).getMedicinePrice() * medicineTransactions.get(holder.getAdapterPosition()).getTransactionQty()));
+//        holder.transaction_totalPrice.setText(String.format(ctx.getResources().getString(R.string.totalPriceFormat), medicines.get(medicineTransactions.get(holder.getAdapterPosition()).getMedicineId()).getMedicinePrice() * medicineTransactions.get(holder.getAdapterPosition()).getTransactionQty()));
+        holder.transaction_totalPrice.setText(String.format(ctx.getResources().getString(R.string.totalPriceFormatString), NumberFormat.getCurrencyInstance(new Locale("in", "ID")).format((double) medicines.get(medicineTransactions.get(holder.getAdapterPosition()).getMedicineId()).getMedicinePrice() * medicineTransactions.get(holder.getAdapterPosition()).getTransactionQty())));
     }
 
     @Override
