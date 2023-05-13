@@ -122,6 +122,7 @@ public class MedTransactionAdapter extends RecyclerView.Adapter<MedTransactionAd
 
             //quantity edtx
             quantityNew = qtyDialog.findViewById(R.id.dialog_edtx_newQty);
+            quantityNew.setHint(DataSingleton.getInstance().getUserMedTransaction().get(getAdapterPosition()).getTransactionQty().toString());
 
             cancelBtn.setOnClickListener(v -> qtyDialog.dismiss());
 
